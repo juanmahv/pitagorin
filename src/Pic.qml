@@ -36,23 +36,15 @@ Rectangle {
 
     Image {
         id: img1
-        source: { "qrc:/pics/"+rimg1.fileName }
+        source: { "qrc:/res/pics/"+rimg1.fileName }
         anchors.fill: parent
         visible: rimg1.picVisible
     }
 
     Image {
         id: imgDefault
-        source: { "qrc:/qmark.png" }
+        source: { "qrc:/res/qmark.png" }
         anchors.fill: parent
         visible: !rimg1.picVisible
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        visible: img1.visible
-        onClicked: {
-           // rimg1.maximize = !rimg1.maximize
-        }
     }
 }

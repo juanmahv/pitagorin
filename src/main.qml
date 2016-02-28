@@ -70,7 +70,7 @@ Window {
 
     ImgRow {
         id: pics
-        y:20
+        y:40
         anchors.horizontalCenter: parent.horizontalCenter
         z:2
     }
@@ -113,7 +113,7 @@ Window {
         id:bar
         property int nquestions: 10
         width: parent.width-10
-        height: 20
+        height: 40
 
         x:5
         y:3
@@ -135,7 +135,7 @@ Window {
     Image {
         id: congrat
 
-        property string fileName: { "qrc:/pics/"+mainRoot.currentImg.toString()+".jpg" }
+        property string fileName: { "qrc:/res/pics/"+mainRoot.currentImg.toString()+".jpg" }
         anchors.fill: parent
         visible:mainRoot.done
         source: fileName

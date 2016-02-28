@@ -131,7 +131,7 @@ Rectangle {
 
         Image {
             id: qmark
-            source: "qrc:/qmark.jpg"
+            source: "qrc:/res/qmark.jpg"
             anchors.centerIn: parent
             anchors.fill: parent
         }
