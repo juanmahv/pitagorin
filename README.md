@@ -6,3 +6,5 @@ The UI was tested on an Acer Iconia A700. For smaller devices (i.e. Phones) the 
 
 The game is basic: the kid has to resolve some randomly selected basic math operations. After 10 hits a cartoon picture appears.
 Currently, the pictures are embedded in the resource file, so no way to change them without recompilation.
+
+The pictures need to be inside the directory *pic* and numerated from 0.jpg to 4.jpg. The pictures are not in repository.
