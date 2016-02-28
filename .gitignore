@@ -1,3 +1,4 @@
 build*
 oldpics
 src/*user*
+src/pics/**
