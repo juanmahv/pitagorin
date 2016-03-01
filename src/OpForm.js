@@ -72,7 +72,7 @@ function randomBasicMult(){
 }
 
 function randomBasicDiv(){
-    var n1 = randomNrUpTo(100);
-    var n2 = randomNrUpTo(11);
+    var n2 = randomNrUpTo(10)+1;
+    var n1 = randomNrUpTo(n2*10)+1;
     return new OpUnit(n1,n2,n1/n2,":");
 }
