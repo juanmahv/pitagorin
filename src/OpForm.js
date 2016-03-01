@@ -66,13 +66,13 @@ function randomNrUpTo(n){
 }
 
 function randomBasicMult(){
-    var n1 = randomNrUpTo(100)+1;
-    var n2 = randomNrUpTo(10)+1;
+    var n1 = randomNrUpTo(11);
+    var n2 = randomNrUpTo(11);
     return new OpUnit(n1,n2,n1*n2,"*");
 }
 
 function randomBasicDiv(){
     var n1 = randomNrUpTo(100);
-    var n2 = randomNrUpTo(10);
+    var n2 = randomNrUpTo(11);
     return new OpUnit(n1,n2,n1/n2,":");
 }
