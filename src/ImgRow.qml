@@ -27,40 +27,14 @@ Row {
             PropertyAnimation { to: 20 }
         }
 
-    Pic {
-        id:pic1
-        posX:10;posY:10
-        fileName: "0.jpg"
-        picVisible: { mainRoot.picVisible[0] }
+    Repeater {
+        model: ["0.jpg", "1.jpg", "2.jpg","3.jpg","4.jpg"]
+        Pic {
+            fileName:modelData
+            picVisible: { mainRoot.picVisible[index] }
+        }
     }
 
-    Pic {
-        posX:180;posY:10
-        fileName: "1.jpg"
-        picVisible: mainRoot.picVisible[1]
-    }
-
-    Pic {
-        posX:350;posY:10
-        fileName: "2.jpg"
-        picVisible: mainRoot.picVisible[2]
-    }
-
-    Pic {
-        x: 532
-        y: 10
-        posX:10;posY:210
-        fileName: "3.jpg"
-        picVisible: mainRoot.picVisible[3]
-    }
-
-    Pic {
-        x: 714
-        y: 10
-        posX:180;posY:210
-        fileName: "4.jpg"
-        picVisible: mainRoot.picVisible[4]
-    }
 }
 
 
