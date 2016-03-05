@@ -6,6 +6,7 @@
         <file>OpForm.qml</file>
         <file>OpForm.js</file>
         <file>main.cpp</file>
+        <file>images.js</file>
     </qresource>
     <qresource prefix="/res">
         <file>pics/1.jpg</file>

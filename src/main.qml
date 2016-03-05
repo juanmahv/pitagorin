@@ -19,6 +19,8 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import QtQuick.Controls 1.3
 
+import "images.js" as Images
+
 Window {
     id:mainRoot
 
@@ -35,13 +37,9 @@ Window {
         }
     }
 
-    property var picVisible: [
-        false,
-        false,
-        false,
-        false,
-        false
-    ]
+    property var listOfFiles: Images.randomlistOfFiles();
+
+    property var picVisible:  Images.visibleMap();
 
     function setVisible(n)
     {
@@ -55,7 +53,7 @@ Window {
         operation.reload()
         bar.value = mainRoot.progress
         setVisible(currentImg)
-        mainRoot.currentImg = (currentImg +1) % 5
+        mainRoot.currentImg = (currentImg +1) % listOfFiles
         mytimer.counter = 0;
     }
 
@@ -135,7 +133,7 @@ Window {
     Image {
         id: congrat
 
-        property string fileName: { "qrc:/res/pics/"+mainRoot.currentImg.toString()+".jpg" }
+        property string fileName: { "qrc:/res/pics/"+mainRoot.listOfFiles[mainRoot.currentImg] }
         anchors.fill: parent
         visible:mainRoot.done
         source: fileName
@@ -151,5 +149,6 @@ Window {
             onClicked:  { mainRoot.reset() }
         }
     }
+
 
 }
